@@ -20,8 +20,6 @@ RUN apt-get update && \
     apt-get autoclean -y && \
     rm -rf /var/cache/apt/* /var/lib/apt/lists/*
 
-RUN pip install --no-cache-dir jupyter
-
 ENV CC=clang-14
 ENV CXX=clang++-14
 
