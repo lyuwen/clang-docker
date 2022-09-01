@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-      ca-ceretificates gnupg gnupg1 gnupg2 wget &&\
+      ca-certificates gnupg gnupg1 gnupg2 wget &&\
     wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
       libllvm-14-ocaml-dev libllvm14 llvm-14 llvm-14-dev llvm-14-doc llvm-14-examples llvm-14-runtime \
